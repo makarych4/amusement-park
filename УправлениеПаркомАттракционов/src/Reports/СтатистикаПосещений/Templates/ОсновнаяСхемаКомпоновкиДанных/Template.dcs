@@ -7,36 +7,10 @@
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных1</name>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Аттракцион</dataPath>
-			<field>Аттракцион</field>
+			<dataPath>ВидАттракциона</dataPath>
+			<field>ВидАттракциона</field>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>КоличествоПосещеийНачальныйОстаток</dataPath>
-			<field>КоличествоПосещеийНачальныйОстаток</field>
-			<role>
-				<dcscom:balance>true</dcscom:balance>
-				<dcscom:balanceGroupName>КоличествоПосещеий</dcscom:balanceGroupName>
-				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>КоличествоПосещеийПриход</dataPath>
-			<field>КоличествоПосещеийПриход</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>КоличествоПосещеийРасход</dataPath>
-			<field>КоличествоПосещеийРасход</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>КоличествоПосещеийКонечныйОстаток</dataPath>
-			<field>КоличествоПосещеийКонечныйОстаток</field>
-			<role>
-				<dcscom:balance>true</dcscom:balance>
-				<dcscom:balanceGroupName>КоличествоПосещеий</dcscom:balanceGroupName>
-				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -51,32 +25,58 @@
 			<dataPath>Основание</dataPath>
 			<field>Основание</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПосещенийНачальныйОстаток</dataPath>
+			<field>КоличествоПосещенийНачальныйОстаток</field>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>КоличествоПосещений</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПосещенийПриход</dataPath>
+			<field>КоличествоПосещенийПриход</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПосещенийРасход</dataPath>
+			<field>КоличествоПосещенийРасход</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПосещенийКонечныйОстаток</dataPath>
+			<field>КоличествоПосещенийКонечныйОстаток</field>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>КоличествоПосещений</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	АктивныеПосещенияОстаткиИОбороты.Аттракцион,
-	АктивныеПосещенияОстаткиИОбороты.КоличествоПосещеийНачальныйОстаток,
-	АктивныеПосещенияОстаткиИОбороты.КоличествоПосещеийПриход,
-	АктивныеПосещенияОстаткиИОбороты.КоличествоПосещеийРасход,
-	АктивныеПосещенияОстаткиИОбороты.КоличествоПосещеийКонечныйОстаток,
+	АктивныеПосещенияОстаткиИОбороты.ВидАттракциона,
+	АктивныеПосещенияОстаткиИОбороты.КоличествоПосещенийНачальныйОстаток,
+	АктивныеПосещенияОстаткиИОбороты.КоличествоПосещенийПриход,
+	АктивныеПосещенияОстаткиИОбороты.КоличествоПосещенийРасход,
+	АктивныеПосещенияОстаткиИОбороты.КоличествоПосещенийКонечныйОстаток,
 	АктивныеПосещенияОстаткиИОбороты.Период
 ИЗ
 	РегистрНакопления.АктивныеПосещения.ОстаткиИОбороты(,, День,,) КАК АктивныеПосещенияОстаткиИОбороты</query>
 	</dataSet>
 	<totalField>
-		<dataPath>КоличествоПосещеийКонечныйОстаток</dataPath>
-		<expression>Сумма(КоличествоПосещеийКонечныйОстаток)</expression>
+		<dataPath>КоличествоПосещенийКонечныйОстаток</dataPath>
+		<expression>Сумма(КоличествоПосещенийКонечныйОстаток)</expression>
 	</totalField>
 	<totalField>
-		<dataPath>КоличествоПосещеийНачальныйОстаток</dataPath>
-		<expression>Сумма(КоличествоПосещеийНачальныйОстаток)</expression>
+		<dataPath>КоличествоПосещенийНачальныйОстаток</dataPath>
+		<expression>Сумма(КоличествоПосещенийНачальныйОстаток)</expression>
 	</totalField>
 	<totalField>
-		<dataPath>КоличествоПосещеийПриход</dataPath>
-		<expression>Сумма(КоличествоПосещеийПриход)</expression>
+		<dataPath>КоличествоПосещенийПриход</dataPath>
+		<expression>Сумма(КоличествоПосещенийПриход)</expression>
 	</totalField>
 	<totalField>
-		<dataPath>КоличествоПосещеийРасход</dataPath>
-		<expression>Сумма(КоличествоПосещеийРасход)</expression>
+		<dataPath>КоличествоПосещенийРасход</dataPath>
+		<expression>Сумма(КоличествоПосещенийРасход)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -92,6 +92,7 @@
 				<v8:DateFractions>DateTime</v8:DateFractions>
 			</v8:DateQualifiers>
 		</valueType>
+		<value xsi:nil="true"/>
 		<useRestriction>true</useRestriction>
 		<expression>&amp;Период.ДатаНачала</expression>
 	</parameter>
@@ -109,6 +110,7 @@
 				<v8:DateFractions>DateTime</v8:DateFractions>
 			</v8:DateQualifiers>
 		</valueType>
+		<value xsi:nil="true"/>
 		<useRestriction>true</useRestriction>
 		<expression>&amp;Период.ДатаОкончани</expression>
 	</parameter>
@@ -132,7 +134,7 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КоличествоПосещеийНачальныйОстаток</dcsset:field>
+					<dcsset:field>КоличествоПосещенийНачальныйОстаток</dcsset:field>
 					<dcsset:lwsTitle>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -141,7 +143,7 @@
 					</dcsset:lwsTitle>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КоличествоПосещеийПриход</dcsset:field>
+					<dcsset:field>КоличествоПосещенийПриход</dcsset:field>
 					<dcsset:lwsTitle>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -150,7 +152,7 @@
 					</dcsset:lwsTitle>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КоличествоПосещеийРасход</dcsset:field>
+					<dcsset:field>КоличествоПосещенийРасход</dcsset:field>
 					<dcsset:lwsTitle>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -159,7 +161,7 @@
 					</dcsset:lwsTitle>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КоличествоПосещеийКонечныйОстаток</dcsset:field>
+					<dcsset:field>КоличествоПосещенийКонечныйОстаток</dcsset:field>
 					<dcsset:lwsTitle>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -168,12 +170,26 @@
 					</dcsset:lwsTitle>
 				</dcsset:item>
 			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>8684ab98-fef2-4a28-948d-3dcb5a439184</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
 						<dcsset:field>Период</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
 					</dcsset:item>
 				</dcsset:groupItems>
 				<dcsset:order>
@@ -185,9 +201,11 @@
 				<dcsset:item xsi:type="dcsset:StructureItemGroup">
 					<dcsset:groupItems>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>Аттракцион</dcsset:field>
+							<dcsset:field>ВидАттракциона</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
 						</dcsset:item>
 					</dcsset:groupItems>
 					<dcsset:order>

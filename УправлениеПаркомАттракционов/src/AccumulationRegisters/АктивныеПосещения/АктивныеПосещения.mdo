@@ -17,10 +17,10 @@
   <dataLockControlMode>Managed</dataLockControlMode>
   <enableTotalsSplitting>true</enableTotalsSplitting>
   <resources uuid="cca5489d-a00e-409e-be5a-df13e4321ebc">
-    <name>КоличествоПосещеий</name>
+    <name>КоличествоПосещений</name>
     <synonym>
       <key>ru</key>
-      <value>Количество посещеий</value>
+      <value>Количество посещений</value>
     </synonym>
     <type>
       <types>Number</types>
@@ -47,13 +47,13 @@
     <useInTotals>true</useInTotals>
   </dimensions>
   <dimensions uuid="912835c1-cbee-4da0-90c8-660bd7c353da">
-    <name>Аттракцион</name>
+    <name>ВидАттракциона</name>
     <synonym>
       <key>ru</key>
-      <value>Аттракцион</value>
+      <value>Вид аттракциона</value>
     </synonym>
     <type>
-      <types>CatalogRef.Аттракционы</types>
+      <types>CatalogRef.ВидыАттракционов</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
