@@ -7,13 +7,13 @@
     <listType typeId="772fb99a-9bb0-4abf-a0aa-2e2d93006410" valueTypeId="d93cee56-840f-45a2-aa15-370b54600284"/>
     <managerType typeId="d4db7b24-1324-468d-be4c-bb0b992329f1" valueTypeId="52925c13-9503-4c92-a00f-6e86dc3247d8"/>
   </producedTypes>
-  <name>ПосещенниеАттракциона</name>
+  <name>ПосещениеАттракциона</name>
   <synonym>
     <key>ru</key>
-    <value>Посещенние аттракциона</value>
+    <value>Посещение аттракциона</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
-  <inputByString>Document.ПосещенниеАттракциона.StandardAttribute.Number</inputByString>
+  <inputByString>Document.ПосещениеАттракциона.StandardAttribute.Number</inputByString>
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
   <createOnInput>Use</createOnInput>
   <dataLockControlMode>Managed</dataLockControlMode>
@@ -27,7 +27,9 @@
   <numberAllowedLength>Variable</numberAllowedLength>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
+  <realTimePosting>Deny</realTimePosting>
   <registerRecords>AccumulationRegister.АктивныеПосещения</registerRecords>
+  <registerRecords>AccumulationRegister.ПосещенияАттракционов</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="1743efbb-9fd5-4884-9fde-2a814ae3f24e">
